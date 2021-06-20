@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="705.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableviewss.FXMLDocumentController">
+   <children>
+      <Label layoutX="44.0" layoutY="31.0" prefHeight="17.0" prefWidth="61.0" text="ID" />
+      <Label layoutX="35.0" layoutY="122.0" text="College" />
+      <Label layoutX="39.0" layoutY="73.0" text="Name" />
+      <Label layoutX="44.0" layoutY="173.0" text="Gpa" />
+      <Label layoutX="44.0" layoutY="213.0" text="Age" />
+      <TextField fx:id="IDTextField" layoutX="98.0" layoutY="27.0" />
+      <TextField fx:id="NameTextField" layoutX="98.0" layoutY="69.0" />
+      <ChoiceBox fx:id="CollegeChoiceBox" layoutX="98.0" layoutY="118.0" prefWidth="150.0" />
+      <Slider fx:id="GpaSlider" blockIncrement="1.0" layoutX="98.0" layoutY="163.0" prefHeight="38.0" prefWidth="149.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="50.0" />
+      <Spinner fx:id="AgeSpinner" layoutX="99.0" layoutY="209.0" />
+      <Label layoutX="359.0" layoutY="31.0" prefHeight="17.0" prefWidth="121.0" text="Date Of Graduation" />
+      <DatePicker fx:id="graduationDatePicker" layoutX="490.0" layoutY="27.0" />
+      <Button fx:id="addButton" alignment="CENTER" layoutX="577.0" layoutY="94.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: green;" text="Add Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Button>
+      <Label fx:id="gpaLabel" layoutX="247.0" layoutY="165.0" prefHeight="17.0" prefWidth="40.0" />
+      <Button fx:id="updateButton" layoutX="577.0" layoutY="147.0" mnemonicParsing="false" onAction="#UpdateStudent" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: blue;" text="Update Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Button>
+      <TableView fx:id="StudentsTable" layoutX="-1.0" layoutY="268.0" onMouseClicked="#LoadData" prefHeight="246.0" prefWidth="568.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="73.0" text="ID" />
+            <TableColumn fx:id="name" prefWidth="64.0" text="Name" />
+            <TableColumn fx:id="age" prefWidth="46.0" text="Age" />
+            <TableColumn fx:id="college" prefWidth="81.0" text="College" />
+            <TableColumn fx:id="gpa" minWidth="0.0" prefWidth="72.0" text="Gpa" />
+            <TableColumn fx:id="date" prefWidth="132.0" text="Date Of Graduation" />
+            <TableColumn fx:id="stdCours" prefWidth="99.0" text="stdCours" />
+         </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="577.0" layoutY="197.0" mnemonicParsing="false" onAction="#deleteRow" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: red;" text="Delete Student" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Button>
+      <TextField fx:id="searchTextField" layoutX="309.0" layoutY="234.0" onKeyReleased="#SearchRows" promptText="Search" />
+      <Button fx:id="course" alignment="CENTER" layoutX="462.0" layoutY="149.0" mnemonicParsing="false" onAction="#AddCourseTostudent" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: green;" text="Add cours" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="coursBox" layoutX="462.0" layoutY="118.0" prefHeight="25.0" prefWidth="103.0" />
+      <Button fx:id="courseMangemet" alignment="CENTER" layoutX="577.0" layoutY="276.0" mnemonicParsing="false" onAction="#courseMangemet" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: green;" text="courseMangemet" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="Query" alignment="CENTER" layoutX="577.0" layoutY="332.0" mnemonicParsing="false" onAction="#Query" prefHeight="32.0" prefWidth="121.0" style="-fx-background-color: green;" text="Query" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

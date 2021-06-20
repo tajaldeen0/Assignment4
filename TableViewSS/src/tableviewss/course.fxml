@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableviewss.CourseController">
+   <children>
+      <TableView fx:id="courseTable" layoutX="14.0" layoutY="15.0" onMouseClicked="#LoadDataCourseClicked" prefHeight="199.0" prefWidth="227.0">
+        <columns>
+          <TableColumn fx:id="courseId" prefWidth="75.0" text="courseId" />
+          <TableColumn fx:id="courseName" prefWidth="75.0" text="courseName" />
+            <TableColumn fx:id="courseRoom" prefWidth="75.0" text="course room" />
+        </columns>
+      </TableView>
+      <Button layoutX="348.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnAddCourse" prefHeight="30.0" prefWidth="99.0" text="AddCourse" />
+      <Label layoutX="315.0" layoutY="20.0" prefHeight="30.0" prefWidth="56.0" text="Cours ID" />
+      <Label layoutX="311.0" layoutY="120.0" prefHeight="30.0" prefWidth="81.0" text="Course room" />
+      <Label layoutX="307.0" layoutY="70.0" prefHeight="30.0" prefWidth="81.0" text="Course Name" />
+      <TextField fx:id="LabelCoursName" layoutX="392.0" layoutY="72.0" style="-fx-background-color: white;" />
+      <TextField fx:id="LabelCoursID" layoutX="392.0" layoutY="22.0" style="-fx-background-color: white;" />
+      <TextField fx:id="LabelCoursRoom" layoutX="392.0" layoutY="122.0" style="-fx-background-color: white;" />
+      <Button layoutX="460.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnDeleteCourse" prefHeight="30.0" prefWidth="99.0" text="Delete" />
+   </children>
+</AnchorPane>
