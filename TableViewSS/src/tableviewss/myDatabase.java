@@ -27,7 +27,7 @@ public class myDatabase {
     public static void getConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost/iug", "root", "");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/test", "root", "");
             System.out.println("Log : Connection to Database IUG has been Established");
         } catch (ClassNotFoundException ex) {
             System.err.println("Class Not Found");
